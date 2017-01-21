@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :jobs
   end
-  
+  member do
+       post :publish
+       post :hide
+     end
    resources :jobs
    root 'jobs#index'
 end
